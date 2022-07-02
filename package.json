@@ -1,0 +1,19 @@
+{
+  "name": "cards",
+  "version": "1.0.0",
+  "description": "Fun with playing cards.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bozoputer/cards.git"
+  },
+  "author": "E Kathuria <e@ekathuria.dev>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bozoputer/cards/issues"
+  },
+  "homepage": "https://github.com/bozoputer/cards#readme"
+}
