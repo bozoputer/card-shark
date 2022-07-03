@@ -23,7 +23,7 @@
 .card,
 .card__inner {
   width: 102px;
-  height: 141px;
+  height: 175px;
 }
 
 .card {
@@ -46,20 +46,25 @@
   transform-style: preserve-3d;
 }
 
-.card__back {
+.card__face {
   transform: rotateY(180deg);
 }
 
-.card__front,
-.card__back {
+.card__back,
+.card__face {
   position: absolute;
   top: 0;
   left: 0;
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
-  color: #888;
+  color: #fff;
   justify-content: center;
   align-items: center;
   backface-visibility: hidden;
+}
+
+.suit-icon {
+  width: 20px;
 }
