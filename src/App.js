@@ -1,15 +1,23 @@
 import React from 'react';
 import './styles.css';
-import club from './img/club-01.png';
+import title from './img/card-shark.png';
+import cards from './images';
+import Card from './Card';
+
+console.log(cards);
 
 const App = () => {
   return (
-    <div className="bg-slate-200 wrapper">
-      <header className="container mx-auto text-center border-2 border-red-700">
-        <h1>The Card Shark</h1>
+    <div className="wrapper">
+      <header className="container mx-auto text-center">
+        <img className="mx-auto" src={ title } alt="Card Shark" />
       </header>
-      <main className="container mx-auto text-center border-2 border-blue-700">
-        <img src={ club } alt="club" className="card" />
+      <main className="container mx-auto text-center border-2 border-blue-700 flex flex-row flex-wrap">
+      <section className="cards flex flex-row flex-wrap">
+        { cards.map((card, index) => {
+            return <Card front={ card } alt={ `card${ index }` } key={ index } />
+        }) }
+      </section>
       </main>
     </div>
   );
