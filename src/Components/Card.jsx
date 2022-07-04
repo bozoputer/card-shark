@@ -1,6 +1,6 @@
 import React from "react";
-import './styles.css'
-import back from "./img/cards/card-back.svg";
+import './../styles.css'
+import back from "./../img/cards/card-back.svg";
 
 const Card = ({ face, alt, id, pip, suit, icon }) => {
   return (
