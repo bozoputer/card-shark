@@ -67,84 +67,84 @@ const cards = [
   {
     id: 2,
     cover: heart02,
-    pip: "Two",
+    pip: "2",
     suit: "hearts",
     icon: heart
   },
   {
     id: 3,
     cover: heart03,
-    pip: "Three",
+    pip: "3",
     suit: "hearts",
     icon: heart
   },
   {
     id: 4,
     cover: heart04,
-    pip: "Four",
+    pip: "4",
     suit: "hearts",
     icon: heart
   },
   {
     id: 5,
     cover: heart05,
-    pip: "Five",
+    pip: "5",
     suit: "hearts",
     icon: heart
   },
   {
     id: 6,
     cover: heart06,
-    pip: "Six",
+    pip: "6",
     suit: "hearts",
     icon: heart
   },
   {
     id: 7,
     cover: heart07,
-    pip: "Seven",
+    pip: "7",
     suit: "hearts",
     icon: heart
   },
   {
     id: 8,
     cover: heart08,
-    pip: "Eight",
+    pip: "8",
     suit: "hearts",
     icon: heart
   },
   {
     id: 9,
     cover: heart09,
-    pip: "Nine",
+    pip: "9",
     suit: "hearts",
     icon: heart
   },
   {
     id: 10,
     cover: heart10,
-    pip: "Ten",
+    pip: "10",
     suit: "hearts",
     icon: heart
   },
   {
     id: 11,
     cover: heart11,
-    pip: "Jack",
+    pip: "J",
     suit: "hearts",
     icon: heart
   },
   {
     id: 12,
     cover: heart12,
-    pip: "Queen",
+    pip: "Q",
     suit: "hearts",
     icon: heart
   },
   {
     id: 13,
     cover: heart13,
-    pip: "King",
+    pip: "K",
     suit: "hearts",
     icon: heart
   },
@@ -158,70 +158,70 @@ const cards = [
   {
     id: 15,
     cover: diamond02,
-    pip: "Two",
+    pip: "2",
     suit: "diamonds",
     icon: diamond
   },
   {
     id: 16,
     cover: diamond03,
-    pip: "Three",
+    pip: "3",
     suit: "diamonds",
     icon: diamond
   },
   {
     id: 17,
     cover: diamond04,
-    pip: "Four",
+    pip: "4",
     suit: "diamonds",
     icon: diamond
   },
   {
     id: 18,
     cover: diamond05,
-    pip: "Five",
+    pip: "5",
     suit: "diamonds",
     icon: diamond
   },
   {
     id: 19,
     cover: diamond06,
-    pip: "Six",
+    pip: "6",
     suit: "diamonds",
     icon: diamond
   },
   {
     id: 20,
     cover: diamond07,
-    pip: "Seven",
+    pip: "7",
     suit: "diamonds",
     icon: diamond
   },
   {
     id: 21,
     cover: diamond08,
-    pip: "Eight",
+    pip: "8",
     suit: "diamonds",
     icon: diamond
   },
   {
     id: 22,
     cover: diamond09,
-    pip: "Nine",
+    pip: "9",
     suit: "diamonds",
     icon: diamond
   },
   {
     id: 23,
     cover: diamond10,
-    pip: "Ten",
+    pip: "10",
     suit: "diamonds",
     icon: diamond
   },
   {
     id: 24,
     cover: diamond11,
-    pip: "Jack",
+    pip: "J",
     suit: "diamonds",
     icon: diamond
   },
@@ -229,13 +229,13 @@ const cards = [
     id: 25,
     cover: diamond12,
     suit: "diamonds",
-    pip: "Queen",
+    pip: "Q",
     icon: diamond
   },
   {
     id: 26,
     cover: diamond13,
-    pip: "King",
+    pip: "K",
     suit: "diamonds",
     icon: diamond
   },
@@ -249,84 +249,84 @@ const cards = [
   {
     id: 28,
     cover: club02,
-    pip: "Two",
+    pip: "2",
     suit: "clubs",
     icon: club
   },
   {
     id: 29,
     cover: club03,
-    pip: "Three",
+    pip: "3",
     suit: "clubs",
     icon: club
   },
   {
     id: 30,
     cover: club04,
-    pip: "Four",
+    pip: "4",
     suit: "clubs",
     icon: club
   },
   {
     id: 31,
     cover: club05,
-    pip: "Five",
+    pip: "5",
     suit: "clubs",
     icon: club
   },
   {
     id: 32,
     cover: club06,
-    pip: "Six",
+    pip: "6",
     suit: "clubs",
     icon: club
   },
   {
     id: 33,
     cover: club07,
-    pip: "Seven",
+    pip: "7",
     suit: "clubs",
     icon: club
   },
   {
     id: 34,
     cover: club08,
-    pip: "Eight",
+    pip: "8",
     suit: "clubs",
     icon: club
   },
   {
     id: 35,
     cover: club09,
-    pip: "Nine",
+    pip: "9",
     suit: "clubs",
     icon: club
   },
   {
     id: 36,
     cover: club10,
-    pip: "Ten",
+    pip: "10",
     suit: "clubs",
     icon: club
   },
   {
     id: 37,
     cover: club11,
-    pip: "Jack",
+    pip: "J",
     suit: "clubs",
     icon: club
   },
   {
     id: 38,
     cover: club12,
-    pip: "Queen",
+    pip: "Q",
     suit: "clubs",
     icon: club
   },
   {
     id: 39,
     cover: club13,
-    pip: "King",
+    pip: "K",
     suit: "clubs",
     icon: club
   },
@@ -340,84 +340,84 @@ const cards = [
   {
     id: 41,
     cover: spade02,
-    pip: "Two",
+    pip: "2",
     suit: "spades",
     icon: spade
   },
   {
     id: 42,
     cover: spade03,
-    pip: "Three",
+    pip: "3",
     suit: "spades",
     icon: spade
   },
   {
     id: 43,
     cover: spade04,
-    pip: "Four",
+    pip: "4",
     suit: "spades",
     icon: spade
   },
   {
     id: 44,
     cover: spade05,
-    pip: "Five",
+    pip: "5",
     suit: "spades",
     icon: spade
   },
   {
     id: 45,
     cover: spade06,
-    pip: "Six",
+    pip: "6",
     suit: "spades",
     icon: spade
   },
   {
     id: 46,
     cover: spade07,
-    pip: "Seven",
+    pip: "7",
     suit: "spades",
     icon: spade
   },
   {
     id: 47,
     cover: spade08,
-    pip: "Eight",
+    pip: "8",
     suit: "spades",
     icon: spade
   },
   {
     id: 48,
     cover: spade09,
-    pip: "Nine",
+    pip: "9",
     suit: "spades",
     icon: spade
   },
   {
     id: 49,
     cover: spade10,
-    pip: "Ten",
+    pip: "10",
     suit: "spades",
     icon: spade
   },
   {
     id: 50,
     cover: spade11,
-    pip: "Jack",
+    pip: "J",
     suit: "spades",
     icon: spade
   },
   {
     id: 51,
     cover: spade12,
-    pip: "Queen",
+    pip: "Q",
     suit: "spades",
     icon: spade
   },
   {
     id: 52,
     cover: spade13,
-    pip: "King",
+    pip: "K",
     suit: "spades",
     icon: spade
   }
