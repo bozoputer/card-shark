@@ -13,11 +13,22 @@ const App = () => {
 
   // Add state for deck
   const [cardSide, setDeck] = useState("back");
+
+  // This function will be called when the user clicks the "Face Down" button
   const handleFaceDown = () => {
+    if (drawnCards.length < 52) {
       setDeck("back");
+    } else {
+      alert("There are no more cards in the deck! Click 'Reset' to start over.");
+    }
   };
+  // This function will be called when the user clicks the "Face Up" button
   const handleFaceUp = () => {
+    if (drawnCards.length < 52) {
       setDeck("front");
+    } else {
+      alert("There are no more cards in the deck! Click 'Reset' to start over.");
+    }
   };
 
   // Remove the top card from the deck and display the card value and suit
