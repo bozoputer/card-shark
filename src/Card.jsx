@@ -2,25 +2,32 @@ import React from "react";
 import './styles.css'
 import back from "./img/cards/card-back.svg";
 
-const Card = ({ face, alt, id, pip, suit, icon }) => {
+const FrontCard = ({ face, alt, pip, suit }) => {
   return (
-    <div className="card-cell flex justify-center items-center w-24 mb-3">
+    <div className="card-cell flex justify-center items-center mb-3">
       <div className="card">
-        <div className="card__inner">
-          <div className="card__back">
-            <img src={ back } alt="playing card back" />
-            <span className="pt font-body">{ id }</span>
-          </div>
-          <div className="card__face">
-            <img src={ face } alt={ alt } />
-            <div className="flex pt">
-              <span className="font-body">{ pip }</span>
-              <img src={ icon } alt={ suit } className="suit-icon ml-1" />
-            </div>
-          </div>
-        </div>
+        <img src={ face } alt={ alt } />
       </div>
     </div>
+  );
+};
+const BackCard = ({ id }) => {
+  return (
+    <div className="card-cell flex justify-center items-center mb-3">
+      <div className="card">
+        <img src={ back } alt="playing card back" />
+        <span className="pt font-body text-stone-50">{ id }</span>
+      </div>
+    </div>
+  );
+};
+
+const Card = ({ side, id, face, alt, pip, suit, icon }) => {
+  // Conditionally render the front or back of the card
+  return (
+    side === "front" ? <FrontCard face={ face } alt={ alt } />
+    : "back" ? <BackCard id={ id } />
+    : null
   );
 };
 
