@@ -4,7 +4,7 @@ import back from "./img/cards/card-back.svg";
 
 const Card = ({ face, alt, id, pip, suit, icon }) => {
   return (
-    <div className="card-cell flex justify-center items-center w-24 mb-3  ">
+    <div className="card-cell flex justify-center items-center w-24 mb-3">
       <div className="card">
         <div className="card__inner">
           <div className="card__back">

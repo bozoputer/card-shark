@@ -59,364 +59,364 @@ import spade from './../img/spade.svg';
 const cards = [
   {
     id: 1,
-    cover: heart01,
+    face: heart01,
     pip: "Ace",
     suit: "hearts",
     icon: heart
   },
   {
     id: 2,
-    cover: heart02,
+    face: heart02,
     pip: "2",
     suit: "hearts",
     icon: heart
   },
   {
     id: 3,
-    cover: heart03,
+    face: heart03,
     pip: "3",
     suit: "hearts",
     icon: heart
   },
   {
     id: 4,
-    cover: heart04,
+    face: heart04,
     pip: "4",
     suit: "hearts",
     icon: heart
   },
   {
     id: 5,
-    cover: heart05,
+    face: heart05,
     pip: "5",
     suit: "hearts",
     icon: heart
   },
   {
     id: 6,
-    cover: heart06,
+    face: heart06,
     pip: "6",
     suit: "hearts",
     icon: heart
   },
   {
     id: 7,
-    cover: heart07,
+    face: heart07,
     pip: "7",
     suit: "hearts",
     icon: heart
   },
   {
     id: 8,
-    cover: heart08,
+    face: heart08,
     pip: "8",
     suit: "hearts",
     icon: heart
   },
   {
     id: 9,
-    cover: heart09,
+    face: heart09,
     pip: "9",
     suit: "hearts",
     icon: heart
   },
   {
     id: 10,
-    cover: heart10,
+    face: heart10,
     pip: "10",
     suit: "hearts",
     icon: heart
   },
   {
     id: 11,
-    cover: heart11,
+    face: heart11,
     pip: "J",
     suit: "hearts",
     icon: heart
   },
   {
     id: 12,
-    cover: heart12,
+    face: heart12,
     pip: "Q",
     suit: "hearts",
     icon: heart
   },
   {
     id: 13,
-    cover: heart13,
+    face: heart13,
     pip: "K",
     suit: "hearts",
     icon: heart
   },
   {
     id: 14,
-    cover: diamond01,
+    face: diamond01,
     pip: "Ace",
     suit: "diamonds",
     icon: diamond
   },
   {
     id: 15,
-    cover: diamond02,
+    face: diamond02,
     pip: "2",
     suit: "diamonds",
     icon: diamond
   },
   {
     id: 16,
-    cover: diamond03,
+    face: diamond03,
     pip: "3",
     suit: "diamonds",
     icon: diamond
   },
   {
     id: 17,
-    cover: diamond04,
+    face: diamond04,
     pip: "4",
     suit: "diamonds",
     icon: diamond
   },
   {
     id: 18,
-    cover: diamond05,
+    face: diamond05,
     pip: "5",
     suit: "diamonds",
     icon: diamond
   },
   {
     id: 19,
-    cover: diamond06,
+    face: diamond06,
     pip: "6",
     suit: "diamonds",
     icon: diamond
   },
   {
     id: 20,
-    cover: diamond07,
+    face: diamond07,
     pip: "7",
     suit: "diamonds",
     icon: diamond
   },
   {
     id: 21,
-    cover: diamond08,
+    face: diamond08,
     pip: "8",
     suit: "diamonds",
     icon: diamond
   },
   {
     id: 22,
-    cover: diamond09,
+    face: diamond09,
     pip: "9",
     suit: "diamonds",
     icon: diamond
   },
   {
     id: 23,
-    cover: diamond10,
+    face: diamond10,
     pip: "10",
     suit: "diamonds",
     icon: diamond
   },
   {
     id: 24,
-    cover: diamond11,
+    face: diamond11,
     pip: "J",
     suit: "diamonds",
     icon: diamond
   },
   {
     id: 25,
-    cover: diamond12,
+    face: diamond12,
     suit: "diamonds",
     pip: "Q",
     icon: diamond
   },
   {
     id: 26,
-    cover: diamond13,
+    face: diamond13,
     pip: "K",
     suit: "diamonds",
     icon: diamond
   },
   {
     id: 27,
-    cover: club01,
+    face: club01,
     pip: "Ace",
     suit: "clubs",
     icon: club
   },
   {
     id: 28,
-    cover: club02,
+    face: club02,
     pip: "2",
     suit: "clubs",
     icon: club
   },
   {
     id: 29,
-    cover: club03,
+    face: club03,
     pip: "3",
     suit: "clubs",
     icon: club
   },
   {
     id: 30,
-    cover: club04,
+    face: club04,
     pip: "4",
     suit: "clubs",
     icon: club
   },
   {
     id: 31,
-    cover: club05,
+    face: club05,
     pip: "5",
     suit: "clubs",
     icon: club
   },
   {
     id: 32,
-    cover: club06,
+    face: club06,
     pip: "6",
     suit: "clubs",
     icon: club
   },
   {
     id: 33,
-    cover: club07,
+    face: club07,
     pip: "7",
     suit: "clubs",
     icon: club
   },
   {
     id: 34,
-    cover: club08,
+    face: club08,
     pip: "8",
     suit: "clubs",
     icon: club
   },
   {
     id: 35,
-    cover: club09,
+    face: club09,
     pip: "9",
     suit: "clubs",
     icon: club
   },
   {
     id: 36,
-    cover: club10,
+    face: club10,
     pip: "10",
     suit: "clubs",
     icon: club
   },
   {
     id: 37,
-    cover: club11,
+    face: club11,
     pip: "J",
     suit: "clubs",
     icon: club
   },
   {
     id: 38,
-    cover: club12,
+    face: club12,
     pip: "Q",
     suit: "clubs",
     icon: club
   },
   {
     id: 39,
-    cover: club13,
+    face: club13,
     pip: "K",
     suit: "clubs",
     icon: club
   },
   {
     id: 40,
-    cover: spade01,
+    face: spade01,
     pip: "Ace",
     suit: "spades",
     icon: spade
   },
   {
     id: 41,
-    cover: spade02,
+    face: spade02,
     pip: "2",
     suit: "spades",
     icon: spade
   },
   {
     id: 42,
-    cover: spade03,
+    face: spade03,
     pip: "3",
     suit: "spades",
     icon: spade
   },
   {
     id: 43,
-    cover: spade04,
+    face: spade04,
     pip: "4",
     suit: "spades",
     icon: spade
   },
   {
     id: 44,
-    cover: spade05,
+    face: spade05,
     pip: "5",
     suit: "spades",
     icon: spade
   },
   {
     id: 45,
-    cover: spade06,
+    face: spade06,
     pip: "6",
     suit: "spades",
     icon: spade
   },
   {
     id: 46,
-    cover: spade07,
+    face: spade07,
     pip: "7",
     suit: "spades",
     icon: spade
   },
   {
     id: 47,
-    cover: spade08,
+    face: spade08,
     pip: "8",
     suit: "spades",
     icon: spade
   },
   {
     id: 48,
-    cover: spade09,
+    face: spade09,
     pip: "9",
     suit: "spades",
     icon: spade
   },
   {
     id: 49,
-    cover: spade10,
+    face: spade10,
     pip: "10",
     suit: "spades",
     icon: spade
   },
   {
     id: 50,
-    cover: spade11,
+    face: spade11,
     pip: "J",
     suit: "spades",
     icon: spade
   },
   {
     id: 51,
-    cover: spade12,
+    face: spade12,
     pip: "Q",
     suit: "spades",
     icon: spade
   },
   {
     id: 52,
-    cover: spade13,
+    face: spade13,
     pip: "K",
     suit: "spades",
     icon: spade

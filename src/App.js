@@ -3,7 +3,7 @@ import './styles.css';
 import title from './img/header.svg';
 import shark from './img/shark.svg';
 import club from './img/club.svg';
-import cards from './data/cards';
+import deck from './data/cards';
 import Card from './Card';
 import { useState } from 'react';
 
@@ -11,28 +11,32 @@ const App = () => {
   // Add state for drawn cards
   const [drawnCards, setDrawnCards] = useState([]);
 
+  // Remove the top card from the deck and display the card value and suit
   const handleDrawCard = (e) => {
     e.preventDefault();
     // Do not allow drawing more cards than exist in the deck
     if (drawnCards.length < 52) {
-      console.log(drawnCards.length);
-      // Add a card to the drawn cards array
-      setDrawnCards([...drawnCards, cards[0]]);
+      // Add a card to drawn cards and remove it from the deck
+      setDrawnCards(function() {
+        return [...drawnCards, deck.shift()];
+      });
       // Remove the card from the cards array
-      cards.shift();
+      // cards.shift();
+    } else {
+      alert('You have already drawn all 52 cards!');
     }
   };
 
   // Iterate over the cards array and create a new array of Card components
-  const displayCards = cards.map((card, index) => {
+  const displayCards = deck.map((card, index) => {
     return (
-      <Card face={ card.cover } alt={ `${ card.pip } of ${ card.suit }` } key={ card.id } id={ card. id } pip={ card.pip } icon={ card.icon} />
+      <Card face={ card.face } alt={ `${ card.pip } of ${ card.suit }` } key={ card.id } id={ card. id } pip={ card.pip } icon={ card.icon} />
     );
   });
 
   const showDrawnCards = drawnCards.map((card, index) => {
     return (
-      <Card face={ card.cover } alt={ `${ card.pip } of ${ card.suit }` } key={ card.id } id={ card. id } pip={ card.pip } icon={ card.icon} />
+      <Card face={ card.face } alt={ `${ card.pip } of ${ card.suit }` } key={ card.id } id={ card. id } pip={ card.pip } icon={ card.icon} />
     );
   });
   return (
