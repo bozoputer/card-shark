@@ -16,7 +16,7 @@ const BackCard = ({ id }) => {
     <div className="card-cell flex justify-center items-center mb-3">
       <div className="card">
         <img src={back} alt="playing card back" />
-        <span className="pt font-body text-stone-50">{id}</span>
+        <span className="pt font-body text-stone-50 text-sm">Card {id}</span>
       </div>
     </div>
   );
