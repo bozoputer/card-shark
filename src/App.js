@@ -11,8 +11,11 @@ const App = () => {
   // Add state for drawn cards
   const [drawnCards, setDrawnCards] = useState([]);
 
-  // Add state for deck
+  // Add state for card sides
   const [cardSide, setDeck] = useState("back");
+
+  // Add state for deck count
+  const [deckCount, setDeckCount] = useState(52);
 
   // This function will be called when the user clicks the "Face Down" button
   const handleFaceDown = () => {
@@ -41,6 +44,7 @@ const App = () => {
     if (drawnCards.length < 52) {
       // Add a card to drawn cards and remove it from the deck
       setDrawnCards([...drawnCards, deck.shift()]);
+      setDeckCount(deckCount - 1);
     } else {
       alert("You have already drawn all 52 cards!");
     }
@@ -75,11 +79,11 @@ const App = () => {
     <>
       <header className="flex flex-col mx-auto my-8">
         <div className="flex justify-center">
-          <img src={club} className="header-icon" />
+          <img src={club} className="header-icon" alt="" />
           <h1 className="text-center text-3xl mx-2 font-body text-slate-50">
             Card Shark
           </h1>
-          <img src={spade} className="header-icon" />
+          <img src={spade} className="header-icon" alt="" />
         </div>
         <img
           src={shark}
@@ -88,12 +92,19 @@ const App = () => {
         />
       </header>
       <main className="container mx-auto text-center flex flex-col">
-        <section className="w-3/5 mx-auto border border-red-700" id="controls">
+        <section className="w-2/5 mx-auto mb-6" id="controls">
           <p>Controls</p>
           <div className="mx-auto flex justify-around">
-            <button className="">Reset</button>
-            <button className="">Shuffle</button>
-            <button className="" onClick={handleDrawCard}>
+            <button className="rounded px-4 py-2 font-semibold text-sm shadow-sm bg-white">
+              Reset
+            </button>
+            <button className="rounded px-4 py-2 font-semibold text-sm shadow-sm bg-white">
+              Shuffle
+            </button>
+            <button
+              className="rounded px-4 py-2 font-semibold text-sm shadow-sm bg-white"
+              onClick={handleDrawCard}
+            >
               Draw
             </button>
           </div>
@@ -112,11 +123,8 @@ const App = () => {
             </button>
           </div>
         </section>
-        <section
-          className="w-2/5 mx-auto mb-6 border border-stone-50"
-          id="counter"
-        >
-          <h2>{} Cards in Deck</h2>
+        <section className="w-2/5 mx-auto mb-6" id="counter">
+          <h2 className="text-white">{deckCount} cards remaining in Deck</h2>
         </section>
         <div className="container mx-auto flex">
           <section className="w-1/2 cards flex flex-row flex-wrap justify-center">
