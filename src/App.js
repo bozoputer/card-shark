@@ -12,15 +12,23 @@ const App = () => {
   const [drawnCards, setDrawnCards] = useState([]);
 
   // Add state for card sides
-  const [cardSide, setDeck] = useState("back");
+  const [cardSide, setCardSide] = useState("back");
 
   // Add state for deck count
   const [deckCount, setDeckCount] = useState(52);
 
+  // Reset the deck
+  const handleResetDeck = () => {
+    setDrawnCards([]);
+    setDeckCount(52);
+    setCardSide("back");
+    deck.unshift(...drawnCards);
+  };
+
   // This function will be called when the user clicks the "Face Down" button
   const handleFaceDown = () => {
     if (drawnCards.length < 52) {
-      setDeck("back");
+      setCardSide("back");
     } else {
       alert(
         "There are no more cards in the deck! Click 'Reset' to start over."
@@ -30,7 +38,7 @@ const App = () => {
   // This function will be called when the user clicks the "Face Up" button
   const handleFaceUp = () => {
     if (drawnCards.length < 52) {
-      setDeck("front");
+      setCardSide("front");
     } else {
       alert(
         "There are no more cards in the deck! Click 'Reset' to start over."
@@ -95,7 +103,10 @@ const App = () => {
         <section className="w-2/5 mx-auto mb-6" id="controls">
           <p>Controls</p>
           <div className="mx-auto flex justify-around">
-            <button className="rounded px-4 py-2 font-semibold text-sm shadow-sm bg-white">
+            <button
+              onClick={handleResetDeck}
+              className="rounded px-4 py-2 font-semibold text-sm shadow-sm bg-white"
+            >
               Reset
             </button>
             <button className="rounded px-4 py-2 font-semibold text-sm shadow-sm bg-white">
@@ -127,7 +138,10 @@ const App = () => {
           <h2 className="text-white">{deckCount} cards remaining in Deck</h2>
         </section>
         <div className="container mx-auto flex">
-          <section className="w-1/2 cards flex flex-row flex-wrap justify-center">
+          <section
+            className="w-1/2 cards flex flex-row flex-wrap justify-center"
+            id="deck"
+          >
             {displayDeck}
           </section>
           <section className="w-1/2 cards flex flex-row flex-wrap justify-center items-baseline">
