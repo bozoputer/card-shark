@@ -30,9 +30,7 @@ const App = () => {
     if (drawnCards.length < 52) {
       setCardSide("back");
     } else {
-      alert(
-        "There are no more cards in the deck! Click 'Reset' to start over."
-      );
+      alert("There are no cards in the deck! Click 'Reset' to start over.");
     }
   };
   // This function will be called when the user clicks the "Face Up" button
@@ -54,7 +52,7 @@ const App = () => {
       setDrawnCards([...drawnCards, deck.shift()]);
       setDeckCount(deckCount - 1);
     } else {
-      alert("You have already drawn all 52 cards!");
+      alert("All 52 cards have been drawn! Click 'Reset' to start over.");
     }
   };
 
@@ -71,6 +69,7 @@ const App = () => {
     );
   });
 
+  // Iterate over the drawn cards array and return a new array of Card components representing the drawn cards
   const showDrawnCards = drawnCards.map((card) => {
     return (
       <Card
@@ -85,7 +84,7 @@ const App = () => {
 
   return (
     <>
-      <header className="flex flex-col mx-auto my-8">
+      <header className="flex flex-col mx-auto mt-6">
         <div className="flex justify-center">
           <img src={club} className="header-icon" alt="" />
           <h1 className="text-center text-3xl mx-2 font-body text-slate-50">
@@ -100,42 +99,43 @@ const App = () => {
         />
       </header>
       <main className="container mx-auto text-center flex flex-col">
-        <section className="w-2/5 mx-auto mb-6" id="controls">
-          <p>Controls</p>
-          <div className="mx-auto flex justify-around">
+        <section className="w-1/6 mx-auto mb-6" id="controls">
+          <p className="text-xl mb-2 text-white font-body">Controls</p>
+          <div className="mx-auto flex justify-around mb-4">
             <button
               onClick={handleResetDeck}
-              className="rounded px-4 py-2 font-semibold text-sm shadow-sm bg-white"
+              className="rounded px-4 py-2 font-semibold text-sm shadow-sm bg-white hover:bg-zinc-900 hover:text-white"
             >
               Reset
             </button>
-            <button className="rounded px-4 py-2 font-semibold text-sm shadow-sm bg-white">
+            <button className="rounded px-4 py-2 font-semibold text-sm shadow-sm bg-white hover:bg-zinc-900 hover:text-white">
               Shuffle
             </button>
             <button
-              className="rounded px-4 py-2 font-semibold text-sm shadow-sm bg-white"
+              className="rounded px-4 py-2 font-semibold text-sm shadow-sm bg-white hover:bg-zinc-900 hover:text-white"
               onClick={handleDrawCard}
             >
               Draw
             </button>
           </div>
-        </section>
-        <section
-          className="w-2/5 mx-auto mb-6 border border-blue-800"
-          id="options"
-        >
-          <p>Options</p>
+          <p className="text-xl mb-2 text-white font-body">Options</p>
           <div className="mx-auto flex justify-around">
-            <button className="" onClick={handleFaceDown}>
+            <button
+              className="rounded px-4 py-2 font-semibold text-sm shadow-sm bg-white hover:bg-zinc-900 hover:text-white"
+              onClick={handleFaceDown}
+            >
               Face Down
             </button>
-            <button className="" onClick={handleFaceUp}>
+            <button
+              className="rounded px-4 py-2 font-semibold text-sm shadow-sm bg-white text-red-700 hover:bg-red-700 hover:text-white"
+              onClick={handleFaceUp}
+            >
               Face Up
             </button>
           </div>
-        </section>
-        <section className="w-2/5 mx-auto mb-6" id="counter">
-          <h2 className="text-white">{deckCount} cards remaining in Deck</h2>
+          <p className="text-white text-xl mt-6 my-4">
+            {deckCount} cards in the deck
+          </p>
         </section>
         <div className="container mx-auto flex">
           <section
