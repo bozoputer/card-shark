@@ -11,11 +11,19 @@ const App = () => {
   // Add state for drawn cards
   const [drawnCards, setDrawnCards] = useState([]);
 
-  // Add state for card sides
+  // Add state for card sides (back vs front)
   const [cardSide, setCardSide] = useState("back");
 
   // Add state for deck count
   const [deckCount, setDeckCount] = useState(52);
+
+  // Add state for deck (in-order vs. shuffled)
+  const [deckState, setDeck] = useState("ordered");
+
+  // Shuffle the deck
+  const handleShuffleDeck = () => {
+    return deck.sort(() => Math.random() - 0.5);
+  };
 
   // Reset the deck
   const handleResetDeck = () => {
@@ -23,6 +31,7 @@ const App = () => {
     setDeckCount(52);
     setCardSide("back");
     deck.unshift(...drawnCards);
+    return cards("ordered");
   };
 
   // This function will be called when the user clicks the "Face Down" button
@@ -44,7 +53,7 @@ const App = () => {
     }
   };
 
-  // Remove the top card from the deck and display the card value and suit
+  // Remove the top card from the deck and display the card rank and suit
   const handleDrawCard = () => {
     // Do not allow drawing more cards than exist in the deck
     if (drawnCards.length < 52) {
@@ -56,18 +65,25 @@ const App = () => {
     }
   };
 
-  // Iterate over the cards array and create a new array of Card components
-  const displayDeck = deck.map((card) => {
-    return (
-      <Card
-        side={cardSide}
-        face={card.face}
-        alt={`${card.pip} of ${card.suit}`}
-        key={card.id}
-        id={card.id}
-      />
-    );
-  });
+  // Iterate over the deck array and sort in order or shuffle, and return an array of Card components
+  const cards = (deckState) => {
+    if (deckState === "ordered") {
+      deck.sort((a, b) => a.id - b.id);
+    } else {
+      deck.sort(() => Math.random() - 0.5);
+    }
+    return deck.map((card) => {
+      return (
+        <Card
+          side={cardSide}
+          face={card.face}
+          alt={`${card.rank} of ${card.suit}`}
+          key={card.id}
+          id={card.id}
+        />
+      );
+    });
+  };
 
   // Iterate over the drawn cards array and return a new array of Card components representing the drawn cards
   const showDrawnCards = drawnCards.map((card) => {
@@ -75,7 +91,7 @@ const App = () => {
       <Card
         side={"front"}
         face={card.face}
-        alt={`${card.pip} of ${card.suit}`}
+        alt={`${card.rank} of ${card.suit}`}
         key={card.id}
         id={card.id}
       />
@@ -103,12 +119,21 @@ const App = () => {
           <p className="text-xl mb-2 text-white font-body">Controls</p>
           <div className="mx-auto flex justify-around mb-4">
             <button
-              onClick={handleResetDeck}
+              onClick={() => {
+                handleResetDeck();
+                setDeck("ordered");
+              }}
               className="rounded px-4 py-2 font-semibold text-sm shadow-sm bg-white hover:bg-zinc-900 hover:text-white"
             >
               Reset
             </button>
-            <button className="rounded px-4 py-2 font-semibold text-sm shadow-sm bg-white hover:bg-zinc-900 hover:text-white">
+            <button
+              onClick={() => {
+                handleShuffleDeck();
+                setDeck({ deckState: "shuffled" });
+              }}
+              className="rounded px-4 py-2 font-semibold text-sm shadow-sm bg-white hover:bg-zinc-900 hover:text-white"
+            >
               Shuffle
             </button>
             <button
@@ -139,12 +164,12 @@ const App = () => {
         </section>
         <div className="container mx-auto flex">
           <section
-            className="w-1/2 cards flex flex-row flex-wrap justify-center"
+            className="w-1/2 cards flex flex-row flex-wrap justify-center pr-3 border-r border-white"
             id="deck"
           >
-            {displayDeck}
+            {cards(deckState)}
           </section>
-          <section className="w-1/2 cards flex flex-row flex-wrap justify-center items-baseline">
+          <section className="w-1/2 cards flex flex-row flex-wrap justify-center items-baseline pl-3">
             {showDrawnCards}
           </section>
         </div>
